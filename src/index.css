@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+
+:root {
+  --font-family: "Encode Sans Expanded", sans-serif;
+  --main-color: #131722 !important;
+  --text-color: #ccc;
+  --danger-color: rgb(171, 6, 6);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family) !important;
+  background-color: var(--main-color) !important;
+  color: #fff !important;
+  min-height: 100.1vh !important;
+
+}
+
+.main-color {
+  color: var(--main-color) !important;
+}
+
+.form-background {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.78) !important;
+}
+
+.offline {
+  background-color: #fff;
+  padding: 15px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  box-shadow: var(--shadow);
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.danger-color {
+  color: var(--danger-color) !important;
+}
+
+.back-danger {
+  background-color: var(--danger-color);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.nav-item a:hover {
+  color: red !important;
+}
+.nav-item a.active {
+  transition: color 0.5s ease !important;
+}
+.nav-item a.active {
+  color: red !important;
+  position: relative;
+  font-weight: bold !important;
+}
+.nav-item a.active::after {
+  content: '';
+  position: absolute;
+  width: 85%;
+  height: 1.5px;
+  background-color: red;
+  bottom: 0;
+  left: 7.5%;
+}
+
+/* ==== Spinner ==== */
+.lds-dual-ring {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 7px solid red;
+  border-color: red transparent red transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

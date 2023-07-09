@@ -1,0 +1,91 @@
+.trendingSection {
+  margin-bottom: 150px;
+}
+.caption {
+  transition: all 0.5s ease, box-shadow 0.7s ease;
+  position: relative;
+  z-index: 3 !important;
+}
+
+.caption:hover {
+  transform: scale(1.06);
+  box-shadow: -7px 6px 11px 2px #2f4f4f;
+}
+
+.caption::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  background-color: rgb(13, 202, 240);
+  top: 10%;
+}
+.caption::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: rgb(13, 202, 240);
+  bottom: 10%;
+}
+
+.caption h2 {
+  font-size: 37px;
+  line-height: 50px;
+}
+.caption p {
+  font-size: 15px;
+  letter-spacing: 0.9px;
+  line-height: 25px;
+}
+
+.movie {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.movie:hover {
+  transform: scale(1.08);
+}
+
+.person {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.person:hover {
+  transform: scale(1.08);
+}
+
+.movie::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 15%;
+  border-radius: 6px 0 100% 0;
+  background-color: rgba(13, 202, 240, 0.8);
+  top: 0;
+  left: 0;
+}
+
+.rate {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  z-index: 9;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.background {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.3)
+    ),
+  url(./../../Assets/images/panner.jpg);
+  background-position: center center;
+  background-size: cover;
+}
